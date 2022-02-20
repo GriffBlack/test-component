@@ -8,8 +8,10 @@ function App() {
   const [value, setValue] = useState('')
 
   const filteredAnimals = data.filter(data => {
-    return data.name.toLowerCase().includes(value.toLowerCase())
+    return data.type.toLowerCase().includes(value.toLowerCase())
   })
+
+
 
   return (
     <div className="App">
