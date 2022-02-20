@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+import Autocomplete from './components/Autocomplete';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Autocomplete />
   </React.StrictMode>,
   document.getElementById('root')
 );
