@@ -5,7 +5,11 @@ import data from './data.json'
 function App() {
 
 
-const [value, setValue] = useState('')
+  const [value, setValue] = useState('')
+
+  const filteredAnimals = data.filter(data => {
+    return data.name.toLowerCase().includes(value.toLowerCase())
+  })
 
   return (
     <div className="App">
@@ -16,6 +20,14 @@ const [value, setValue] = useState('')
           className='inputAuto'
           onChange={(event) => setValue(event.target.value)}
         />
+        <select>
+          {filteredAnimals.map((data, index) => {
+            return (
+              <option>{data.name}</option>
+              
+            )
+          })}
+        </select>
         <div className='post'>
           {/* {data.map(animal => {
             return (
